@@ -1,0 +1,776 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Touch & Glow</title>
+<script src="bootstrap.min.css"></script>
+<script src="css.css"></script>
+
+ <link  href="css/stylesheet.css" rel="stylesheet" type="text/css">
+   <link href="css/aos.min.css" rel="stylesheet" type="text/css">
+   
+
+<!--online links-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+ <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/*Nav bar*/
+
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#000;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #303;}
+
+
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+/* Carousel */
+.mySlides {display:none;}
+
+
+ /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+/*footer*/ 
+
+.footer{
+background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(home/2.PNG); background-repeat:no-repeat; background-size:cover;
+ width:100%;  height:100%;   background-attachment: fixed;background-position:  center; 
+   } 
+
+.image{ background-image:url(home/bgg.PNG);width:100%;  background-repeat:no-repeat; background-size:cover; height:100%;background-position:  top; } 
+/*Vertical line*/
+.vl {
+  border-left: 3px solid pink;
+  height: 130px;
+}
+/*for single pic*/
+.makeup{margin-top:80px; margin-left:30PX}
+
+ 
+/*for giving frame to single pic*/
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  
+  max-width: 600px;
+  width: 90%;
+}
+
+.background{background-color:#303}/*for brand main heading*/
+.w3-text-white,.w3-hover-text-white:hover{color:#fff!important}
+.w3-container,.w3-panel{padding:0.01em 16px}
+
+/*card*/
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+/*opacity*/
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(67, 68, 68, 0.7);
+}
+.image:hover .overlay{
+  opacity: 1;
+}
+.detail{
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+  
+  
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="col-lg-3" style="width:100%;height:130px;background-color:#000">
+
+<a href="index.html">
+<img src="home/logo-.png" class="img-fluid" style="margin-top:-20px;margin-left:90px;"></a></div>
+<div class="col-lg-7" style="width:100%;height:130px;background-color:#000">
+<center>
+<h1  align="center" style="margin-top:35px;color:#FFF">𝓣𝓞𝓤𝓒𝓗 & 𝓖𝓛𝓞𝓦</h1>
+</center>
+</div>
+<div class="col-lg-2" style="width:100%;height:130px;background-color:#000">
+</div></div>
+
+<!--navbar-->
+<div class="row">
+<div class="col-lg-12">
+<div id="navbar">
+
+<ul class="topnav "><center>
+   
+  <li class="nav-item" style="margin-left:200px"><a class="nav-link font-weight-bolder text-white"  href="index.html">Home</a></li>
+  <li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="brands.html">Brands</a></li>
+  
+  <li  class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white"href="face.html">Face</a></li>
+  <li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="eyes.html">Eyes</a></li>
+  <li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="lips.html">Lips</a></li>
+  <li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="about.html">About</a></li>
+  <li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="gallery.html">Gallery</a></li><li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="faqs.html">FAQ's</a></li>
+  
+  <li class="nav-item" style="margin-left:30px"><a class="nav-link font-weight-bolder text-white" href="contact.html">Contact Us</a></li>
+  </center>
+</ul>
+
+</div>
+</div></div>
+
+
+
+
+  
+  <div class="row">
+  <div class="col-lg-12">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+ 
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner" style="width:104%; margin-left:-3%">
+    <div class="carousel-item active">
+    <img  src="home/1.PNG" style="height:500px; width:100%"alt="Chicago" >
+    </div>
+    <div class="carousel-item">
+      <img src="home/home_slider_img_2.jpg"  style="height:500px; width:100%"alt="Cell info.  " >
+    </div> 
+    <div class="carousel-item">
+      <img src="home/Capture.PNG" alt="New York" style=" height:500px; width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="home/Slider-1-1.png" alt="New York" style=" height:500px; width:100%">
+    </div>
+  </div>
+
+ 
+  <!-- Left and right controls -->
+  <p class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </p>
+  <p class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </p>
+</div>
+  </div>
+  </div>
+  
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+</div>
+</div></div>
+
+<!--
+<div class="row">
+         <div class="col-lg-12 col-sm-12 col-xl-12 col-md-12"   >
+            <div class="w3-container w3-text-white  background ">
+            
+               <h2 style="font-size: 38px;color: #FFF;text-align: center;" ><span>MAKE-UP</span></h2>
+            
+            </div>
+         </div>
+      </div>
+      
+<div class="row">
+<div class="col-lg-12" style=" background-image:url(home/slider_1600.jpg);width:100%;height:270px;" class="img-fluid">
+
+<h3 style="margin-left:700px;margin-top:120px">“I love the confidence that makeup gives me.”<br/>
+― Tyra Banks
+</h3>
+</div></div>
+-->
+
+  <div class=" row">
+
+         <div class="col-lg-12"   >
+            <div class="w3-container w3-text-white  background ">
+            
+               <h2 style="font-size: 40px;color: #FFF;text-align: center;" ><span>OUR BRANDS</span></h2>
+            
+            </div>
+         </div>
+      </div>
+    
+    
+    
+          <div class="row" style="background-image:url(home/bbb.PNG);  background-repeat:no-repeat; background-size:cover; background-attachment: fixed;background-position:  top;">
+         <div class="col-md-1">
+        </div>
+         <div class="col-md-8">
+     <br/>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="w3-third  ">
+                     <div class="w3-card  w3-margin-left zoom " >
+                   <a href="maybelline.html">     <img src="home/MNY-July.jpg" style="width:100%; height:300PX;border:10px solid black" class="img-fluid w3-responsive">
+                        <div class="w3-container BORDER colorsubhead ">
+                           <h5  class=" text-center  w3-hover-text-yellow w3-text-white   " ><b>Maybelline</b></h5></a>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="w3-third  ">
+                     <div class="w3-card zoom  margin">
+                    <a  href="nyx.html">     <img src="home/NYX-July.jpg" style="width:100%; height:300PX;border:10px solid black" class="img-fluid w3-responsive">
+                        <div class="w3-container BORDER colorsubhead">
+                           <h5 class=" text-center  w3-hover-text-yellow  w3-text-white  "><b>Nyx</b></h5></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="w3-third">
+                     <div class="w3-card   zoom    w3-margin-left  ">
+                    <a href="loreal.html">    <img src="home/Lomu-July.jpg" style="width:100%; height:300PX;border:10px solid black" class="img-fluid w3-responsive">
+                        <div class="w3-container BORDER colorsubhead">
+                           <h5 class="text-center  w3-hover-text-yellow w3-text-white  "   ><b>Loreal</b></h5></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="w3-third">
+                     <div class="w3-card  zoom margin ">
+                      <a href="makeuprevolution.html">   <img src="home/revolution-small.jpg"  style="width:100%; height:300PX;border:10px solid black" class="img-fluid w3-responsive">
+                        <div class="w3-container BORDER colorsubhead">
+                            <h5 class=" text-center  w3-hover-text-yellow w3-text-white   "><b>Makeup Revolution</b></h5></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div class="col-md-3">
+        <br/>
+         <div >
+          
+            <img src="home/mm.jpg" alt="adv" class="img-fluid ad-img" style="width:80%" />
+            </div>
+         </div>
+     
+      </div>
+    
+
+
+<div class="row">
+         <div class="col-lg-12 col-sm-12 col-xl-12 col-md-12"   >
+            <div class="w3-container w3-text-white  background ">
+            
+               <h2 style="font-size: 40px;color: #FFF;text-align: center;" ><span>CATEGORIES</span></h2>
+            
+            </div>
+         </div>
+      </div>
+      
+
+<div class="row">
+<div class="col-lg-12">
+<div id="section" class="image " style="height:100%;width:100%">
+<br/>
+<br/>
+<div align="center">
+
+
+
+<a href="face.html" target="_blank">
+<img src="home/face.PNG"  class="img-fluid zoom" style="width:360px; height:360px;border:10px solid black;"/>
+</a>
+<a href="eyes.html" target="_blank">
+<img src="home/eye.PNG" class="img-fluid zoom" style="width:360px; height:360px;border:10px solid black"/></a>
+<a href="lips.html" target="_blank">
+<img src="home/lipp.PNG" class="img-fluid zoom" style="width:360px; height:360px;border:10px solid black"/></a>
+
+
+
+<!--
+<a href="face.html" target="_blank">
+<img class="img-fluid zoom" style="width:360px; height:360px;border:10px solid black;
+background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(home/l.jpg); background-repeat:no-repeat; background-size:cover;
+ background-attachment: fixed;background-position:  center; "
+ /></a>
+
+
+<a href="eyes.html" target="_blank">
+
+<img class="img-fluid zoom" style="width:360px; height:360px;border:10px solid black;
+background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(home/l.jpg); background-repeat:no-repeat; background-size:cover;
+ background-attachment: fixed;background-position:  center; "
+ /></a>
+
+
+
+<a href="lips.html" target="_blank">
+
+<img class="img-fluid zoom" style="width:360px; height:360px;border:10px solid black;
+background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(home/l.jpg); background-repeat:no-repeat; background-size:cover
+;background-position:  center; text-align:center " />
+ 
+ </a>
+-->
+<br/>
+<br/><br/>
+</div>
+ 
+ 
+</div>
+</div>
+</div>
+
+
+<!--
+<div class="row">
+         <div class="col-lg-12 col-sm-12 col-xl-12 col-md-12"   >
+            <div class="w3-container w3-text-white  background ">
+               <h2 style="font-size: 30px;color: #FFF;text-align: center;" >ABOUT MAKEUP</h2>
+            </div>
+         </div>
+      </div>
+    -->  
+
+
+      <div class="row">
+         <div class="col-lg-6 col-sm-6 col-md-6 col-xl-6"  style="height:660PX;width:100%; background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(home/pbg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;" >
+              
+               <div   style=" bottom:60px; position:absolute; left:30px ;color:#FFF  "  class=" font-weight-bolder"   >
+                  <center>
+                  <p>----------------------------------------------------------------------------------------------------</p>
+                  <h3 class="font-weight-bolder "  >𝐌𝐀𝐊𝐄-𝐔𝐏 </h3><br/>
+                  
+                     <p>It enhances your beauty and you look more fresh and pretty.A woman can use makeup to look outstanding and inviting.</p>
+                     <p>Makeup makes you creative, It’s just like doing arts and of course experimenting new things on your face which kind of makes you your own scientist.</p>
+                     <p>Sometimes makeup removes the signs of age and makes a women look more fresh and young.</p>
+               
+<p>Makeup helps you to protect your skin and keep it safe from pollution, smog etc that harm your skin. Makeup creates a slight barrier around your skin to keep it from being directly exposed to dust.</p>
+                 
+<p>You can use makeup to look best in photos. Sometimes the natural features on your face will not be all that noticeable. But with makeup, you can add a brighter look to your face and produce a good style that adds a nice touch all around and helps you to look your best for the camera.</p>
+                  <p>----------------------------------------------------------------------------------------------------</p>
+                     
+                </center>
+               </div>
+            </div>
+         
+         <div class="col-lg-6 col-sm-6 col-md-6 col-xl-6"  style="background-color:#000;width:100%;height:660PX;">
+            <div class="makeup" style="background-color:#000" align="center" ><img src="home/wake.PNG" class="inline-photo border-dark img-fluid" style="height:430PX;width:430px ;" align="center"> </div>
+</div>   
+
+</div>
+      
+
+<div class="row">
+<div class="col-lg-12">
+<center>
+<img src="home/about mkup.jpg" class="img-fluid">
+</center>
+
+</div></div>
+<div class="row" style="height:300px">
+<div class="col-lg-12" style="background-image:url(home/b3.jpg);width:100%;  background-repeat:no-repeat; background-size:cover; height:100%;   background-attachment: fixed;background-position:  top;">
+
+</div>
+</div>
+<div class="row" style="width:100%">
+<div class="col-lg-1"></div>
+<div class="col-lg-5" ><center><br/><br/><br/>
+<img src="home/about_us_home_banner.jpg" class="img-fluid" style="border:5px solid black" >
+</center>
+</div>
+<div class="col-lg-5" align="center" style="width:100%;">
+<center>
+<br/><br/><br/><br/><br/>
+<h4>BEHIND THE BRANDS</h4><br/>
+<p align="center" style="font-size:14px">Touch & Glow is an independent beauty brand created for makeup lovers across the world. Our product range features exciting, cruelty-free, and vegan products with innovative formulas and glamorous packaging that stand out with exceptionally gorgeous color results.</p>
+<br/>
+<img src="home/icons_800x.png" class="img-fluid" style="height:80px;width:400px">
+<br/><br/><a href="about.html">
+<button style="background-color:#000;color:#FFF;width:150px;height:50px">Read More</button></a>
+</center><br/>
+</div>
+<div class="col-lg-1"></div>
+</div>
+<br/><br/><br/>
+
+
+
+
+
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-12" style="height:100px;width:100%" align="center">
+ <br/><center>
+  <h2 style="font-family:'Times New Roman', Times, serif"><b>Touch & Glow is your one step shop for cosmetics</b></h2>
+  <br/>
+ </center>
+  </div>
+  </div>
+  
+  
+ <div class="row" >
+  <div class="col-lg-4" style="width:100%" align="center">
+ <h3 style="color:#666;font-family:'Times New Roman', Times, serif"><b>100% Original</b></h3>
+ <p>We Deliver 100% Original and Imported Cosmetics with Money Back Guarantee right at your doorstep.</p><br/><br/>
+ </div>
+  <div class="col-lg-4 vl" style="width:100%" align="center">
+ <h3 style="color:#666;font-family:'Times New Roman', Times, serif"><b>Delivery Charges Rs.199 all Cities Across Pakistan</b></h3>
+ <p>Online Payments as well as Cash on Delivery Systems are Available.</p><br/><br/>
+ </div>
+  <div class="col-lg-4 vl" style="width:100%" align="center">
+ <h3 style="color:#666;font-family:'Times New Roman', Times, serif"><b>Secure Service System</b></h3>
+ <p>All your Personal Details are Kept Confidential as per our Company's Privacy Policy</p><br/><br/>
+ </div>
+  
+ </div> 
+  </div>
+  </div>
+ 
+ 
+ 
+
+      <div class="row">
+    
+    
+         <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12"  style="margin-top:-9px"         >
+            <div class="footer img-fluid">
+               <!-- Footer -->
+               <footer class="page-footer font-small blue-grey lighten-5 text-white">
+                  <div style="background-color: #303;">
+                     <div class="container">
+                        <!-- Grid row-->
+                        <div class="row py-4 d-flex align-items-center">
+                           <!-- Grid column -->
+                           <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                              <h5 class="mb-0">Follow us & Share this page</h5>
+                           </div>
+                           <!-- Grid column -->
+                           <!-- Grid column -->
+                           <div class="col-md-6 col-lg-7 text-center text-md-right">
+                         
+                              <!-- Facebook -->
+                              <a class="fb-ic" href="https://www.facebook.com/">
+                              <i class="fab fa-facebook-f white-text mr-4"> </i>
+                              </a>
+                              <!-- Twitter -->
+                              <a class="tw-ic" href="https://twitter.com/">
+                              <i class="fab fa-twitter white-text mr-4"> </i>
+                              </a>
+                              
+                              <!--youtube-->
+                              <a class="yt-ic" href="https://www.youtube.com/">
+                              <i class="fab fa-youtube white-text mr-4"> </i>
+                              </a>
+                              <!--Instagram-->
+                              <a class="ins-ic" href="https://www.instagram.com/">
+                              <i class="fab fa-instagram white-text"> </i>
+                              </a>
+                           </div>
+                           <!-- Grid column -->
+                        </div>
+                        <!-- Grid row-->
+                     </div>
+                  </div>
+                  <!-- Footer Links -->
+                  <div class="container text-center text-md-left mt-5">
+                     <!-- Grid row -->
+                     <div class="row mt-3 dark-grey-text">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                           <!-- Content -->
+                         <!--  <h5 class="text-uppercase font-weight-bold">Touch & Glow</h5>-->
+                         <a href="index.html">
+                          <img src="home/logo-.png" style="margin-top:-80px;margin-bottom:-70px;margin-left:-90px;" ></a>
+                           <p style="font-size:18px"> 𝓣𝓞𝓤𝓒𝓗 & 𝓖𝓛𝓞𝓦<p/>
+                           
+                           <p>Our Mission is to cater to the makeup needs of our audience and reach out to every customer who wants international brands of premium quality.
+                           </p>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-2" style="font-weight:bolder">
+                           <!-- Links -->
+                           
+                           <h6 class="text-uppercase font-weight-bold text-md-center">Customer Services</h6>
+                          
+                           <p class="mx-5">
+                              <a class="dark-grey-text" href="about.html">About </a>
+                           </p>
+                            
+                            
+                           
+                           <p class="mx-5">
+                              <a class="dark-grey-text" href="gallery.html">Gallery</a>
+                           </p>
+                           <p class="mx-5">
+                              <a class="dark-grey-text" href="contact.html">Contact</a>
+                           </p>
+                            <p class="mx-5">
+                              <a class="dark-grey-text" href="contact.html">FAQ's</a>
+                           </p>
+                        </div>
+                        <!-- Grid column -->
+                         <!-- Grid column -->
+                        <div class="col-md-2" style="font-weight:bolder">
+                           <!-- Links -->
+                          <center>
+                           <h6 class="text-uppercase font-weight-bold">Categories</h6>
+                         
+                           <p  class="mx-2" style="color:#CCC">
+                              <a class="dark-grey-text" href="lips.html">Lips</a>
+                           </p>
+                           <p class="mx-2">
+                              <a class="dark-grey-text" href="eyes.html">Eyes</a>
+                           </p>
+                           <p class="mx-2">
+                              <a class="dark-grey-text" href="face.html">Face</a>
+                           </p></center>
+                        </div>
+                        <!-- Grid column -->
+                       
+                        
+                        <!-- Grid column -->
+                        <div class="col-md-2" style="font-weight:bolder">
+                           <!-- Links -->
+                           <h6 class="text-uppercase font-weight-bold">Brands</h6>
+                           <p  class="mx-2" style="color:#CCC">
+                              <a class="dark-grey-text" href="maybelline.html">Maybelline</a>
+                           </p>
+                           <p class="mx-2">
+                              <a class="dark-grey-text" href="nyx.html">Nyx</a>
+                           </p>
+                           <p class="mx-2">
+                              <a class="dark-grey-text" href="loreal.html">Loreal</a>
+                           </p>
+                           <p class="mx-2">
+                              <a class="dark-grey-text" href="makeuprevolution.html">Makeup Revolution</a>
+                           </p>
+                        </div>
+                        <!-- Grid column -->
+                        
+                        
+                        
+                        
+                        <!-- Grid column -->
+                        <div class="col-md-3 ">
+                           <!-- Links -->
+                           <h5 class="text-uppercase font-weight-bold">Connect</h5>
+                           <p>
+                              <i class="fas fa-home mr-3"></i> Karachi, Pakistan
+                           </p>
+                           <p>
+                              <i class="fas fa-envelope mr-3"></i> info@touch&glow.com
+                           </p>
+                           <p>
+                              <i class="fas fa-phone mr-3"></i> 021 36649490
+                           </p>
+                         
+                        </div>
+                        <!-- Grid column -->
+                     </div>
+                     <!-- Grid row -->
+                  </div>
+                  <!-- Footer Links -->
+                  <!-- Copyright -->
+                  <div class="footer-copyright text-center text-white py-3   " style="background-color:#000; margin-top:0px   ">                           Copyright © 2020 All rights reserved. 
+                    <!-- <a class="dark-grey-text" href="index.html"> Touchandglow.com.pk</a>-->
+                  </div>
+                  <!-- Copyright -->
+               </footer>
+               <!-- Footer -->
+               
+        
+           </div></div></div>            
+             
+            
+              <script src="JAVA/aos.min.js" type="text/javascript"  ></script>   
+                
+               
+                 <!--Online Links-->
+               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+            
+               <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+               <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+              
+                   
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+               <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script> 
+              
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+                 
+                  <script>
+                  AOS.init();
+               </script>
+               <script type="text/javascript"></script>
+                        
+
+</body>
+</html>

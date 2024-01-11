@@ -1,0 +1,600 @@
+*{
+	margin: 0px;
+	padding: 0px;
+;
+  scroll-behavior: smooth;
+}
+
+
+.navbar .dropdown-menu div[class*="col"] {
+   margin-bottom:1rem;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+  background-color: #737373!important;
+ 
+  
+}
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+  
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+  padding-top:30px;
+  padding-bottom:20px; 
+  height:70px; 
+    
+  
+  
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+  padding:.8rem .8rem;
+  margin:0 .35rem; 
+  
+}
+
+/* makes the dropdown full width  */
+.navbar .dropdown {position:static;}
+
+.navbar .dropdown-menu {
+  top: 60px !important;
+  left: 25% !important;
+  padding: 30px 30px  !important;
+  width:30% !important;
+  display:block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+  
+ 
+
+  
+  /* shows the dropdown menu on hover */
+.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+  display:block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s linear;
+  
+}
+  
+  .navbar .dropdown-menu {
+    
+  
+ border-radius: 15px !important;
+    top: 50px;
+
+    
+ 
+  }
+
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  padding: -30px;
+  background-color: transparent;
+  transition: transform .2s; /* Animation */
+  width: 100%;
+  /* height: 200px; */
+  margin-left: 0PX;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+   -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+
+}
+
+.brand h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+h2:before,
+h2:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+h2:after {
+    margin: 0 0 0 20px;
+}h2 {
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+    align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+h2:before,
+h2:after {
+    content: '';
+    border-top: 2px solid;
+  
+}
+  /*
+.brand1 h6 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+h6:before,
+h6:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+h6:after {
+    margin: 0 0 0 20px;
+}h6 {
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+    align-items: center;
+    text-align: center;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+h6:before,
+h6:after {
+    content: '';
+    border-top: 2px solid;
+  
+}*/
+  
+/*for fliping logo*/
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+ 
+  color: black;
+}
+
+.flip-box-back {
+  
+  
+  transform: rotateY(180deg);
+}  
+.BORDER{border-top:groove}/*for brands name*/
+
+
+.margin{margin-left: 10px;}/*for second pics of brand*/
+
+.margintop{ margin-top: 200px}
+.margintop1{margin-top:70px}
+.colorsubhead{ background-color:#000 }/*for giving colur to brands name*/
+.background{background-color:#51001F}/*for brand main heading*/
+
+
+
+body{
+	/* [disabled]padding: 0 !important; */
+	margin: 0 !important;
+	text-align: justify;
+	overflow-x: hidden!important;
+o; 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+
+
+
+.img{margin-left:30px; margin-top:-15px }/*for logo*/
+
+.line:hover{transition-property:all; background-color:#999; font-weight:bolder} /*for line moving upward*/
+.line{background-color:#600; color:#FFF; font-weight:bold}
+
+
+
+
+/*for giving frame to single perfume*/
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  
+  max-width: 600px;
+  width: 90%;
+}
+
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(-2deg);
+}
+.inline-photo1 {
+  border: 1em solid #fff;
+  border-bottom: 2em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  transform: rotateZ(-2deg);
+  max-width: 550px;
+  width: 10%;
+  height:300px
+}
+
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(-2deg);
+}
+
+/*for glowing text*/
+.glow {
+  font-size: 40px;
+  color: #FFF;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #FF0, 0 0 20px #9F3, 0 0 30px #999, 0 0 40px #FC9, 0 0 50px #FC9, 0 0 60px #e60073, 0 0 70px #FF0;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #FC3, 0 0 50px #339, 0 0 60px #FF0, 0 0 70px #0F6, 0 0 80px #ff4da6;
+  }
+}
+
+
+
+
+
+/*for single perfume pic*/
+.perfume{margin-top:80px; margin-left:30PX}
+
+
+.perfume:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+
+
+
+}
+
+
+
+
+
+
+
+
+.piclogo{ background-image: url(../images/pexels-photo-1669068.jpeg);  background-repeat:no-repeat; background-size:cover; height:183PX;   background-attachment: fixed;background-position:  top;}
+
+.header{ background-image:url(../images/home_perfume_sectionbg2.jpg);width:100%;  background-repeat:no-repeat; background-size:cover; height:350PX;   background-attachment: fixed;background-position: right top;} /*FLOWER PIC*/ 
+
+
+.TOP{ background-image:url(../images/b1.jpg);width:100%;  background-repeat:no-repeat; background-size:cover; height:300PX;   background-attachment: fixed;background-position:  top; } /*TOP ONE*/  
+
+
+.small{ background-image:url(../images/small1.jpg);width:100%;  background-repeat:no-repeat; background-size:cover; height:170PX;   background-attachment: fixed;background-position: bottom; }   
+
+
+.footer{ background-image:url(../images/fooooooter.jpg);width:100%;  background-repeat:no-repeat; background-size:cover; height:360PX;   background-attachment: fixed;background-position:  top; } 
+/*
+.perfumetext {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+*/
+
+
+
+
+#carousel-example-generic {
+    margin: 20px auto;
+    width: 400px;
+}
+
+#carousel-custom {
+    margin: 20px auto;
+    width: 400px;
+}
+#carousel-custom .carousel-indicators {
+    margin: 10px 0 0;
+    overflow: auto;
+    position: static;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+}
+#carousel-custom .carousel-indicators li {
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    height: auto;
+    margin: 0 !important;
+    width: auto;
+}
+#carousel-custom .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+}
+#carousel-custom .carousel-indicators li.active img {
+    opacity: 1;
+}
+#carousel-custom .carousel-indicators li:hover img {
+    opacity: 0.75;
+}
+
+
+
+
+
+
+/* Next & previous buttons */
+
+
+@media (min-width: 601px){
+  .w3-col.m4, .w3-third {
+     width: unset !important; 
+}
+}
+
+
+.w3-col, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+    float: unset !important;
+}
+
+.w3-third {
+    margin-bottom: 20px;
+}
+
+.ad-img{
+  height: 684px !important;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+ 
+}
+/* last carousel of home*/ 
+.ourworks-box{
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+  background-color:#F99
+}
+
+.our-works-head{
+  font-size: 30px;
+  font-weight: 400;
+  color: black;
+}
+.introduce{
+  height: 300px;
+  background-color:white;
+  box-shadow: 0 3px 10px #5969f642;
+  border-bottom: 4px solid #5969f6;
+  color: black;
+}
+
+.introduce:hover{
+  box-shadow: 0 3px 15px #5969f666;
+  border-bottom: 4px solid #B122e5;
+  color: black;
+  text-decoration: none;
+}
+.flex-column-1{
+  height: 70%;
+  width: 100%;
+
+}
+.flex-column-2{
+  height: 30%;
+  width: 100%;
+  align-items:center;
+  margin: -24px 0;
+}
+.text-gray{
+  color: gray;
+}
+.pic{
+    height: 70px;
+    width: 70px;
+    margin-left: 20px;
+    /* border-radius: 50%; */
+    transition: all .2s ease-in-out;
+}
+
+.introduce:hover .pic{
+  transform: scale(1.1);
+}
+.carousel-indicators .active{
+  background-color: #46eeaa;
+}
+.carousel-indicators li{
+  background-color: #c8e5ff;
+}
+.carousel-indicators{
+  bottom: -50px;
+}
+.p1{
+  background-image: url("../images/ck.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+.p2{
+  background-image: url("../images/ck1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 150px;
+  margin: 0px auto;
+}
+.p3{
+  background-image: url("../images/opio1.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+    height: 150px;
+
+}/* end of last carousel of home*/ 
+
+
+.p4{
+  background-image:url("../images/j1..jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+.p5{
+  background-image: url("../images/j2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 150px;
+  margin: 0px auto;
+}
+
+.p6{
+  background-image: url("../images/j7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+    height: 150px;
+
+}/* end of last carousel of home*/ 
+
+.p7{
+  background-image:url("../images/coco1.jpg");;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+.p8{
+  background-image: url("../images/opio%20fagrance.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 150px;
+  margin: 0px auto;
+}
+
+.p9{
+  background-image: url("../images/coco5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+    height: 150px;
+
+}/* end of last carousel of home*/ 
+
+
+.img3 {
+  max-width: 100%;
+  margin-left:30px
+
+}
+
+.img3 img {
+ display: inline-block;
+ max-width: 100%;
+ height: auto;
+ width: 30%;
+ margin: 1%;
+ transition: 1s;
+ border: 1px solid #000;
+ border-radius: 16px;
+}
+
+.img3 img:hover{
+ transform: scale(1.1);
+ z-index: 2;
+ box-shadow: 2px 2px 2px #000;	
+ border: 1px solid #000;
+  border-radius: 16px;
+}
+
+
+
+
+.hr{ 
+  border:1px groove   ;
+}

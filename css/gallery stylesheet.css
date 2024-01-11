@@ -1,0 +1,31 @@
+
+
+/** Code By WebDevTrick ( https://webdevtrick.com ) **/
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+img{height: 300px;}
+
+
+.cardholder {
+  margin-top: 150px;
+          perspective: 600px;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+          transform: rotateY(50deg);
+  box-shadow: -6px 5px 13px 2px rgba(0, 0, 0, 0.25);
+	transition: all 1s ease;
+  color: transparent; 
+}
+.card:hover {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+          transform: rotateY(0deg);
+  box-shadow: 0px 0px 36px 2px rgba(0, 0, 0, 0.25);
+  border-top:solid 8px #D91A36;
+  color: black; 
+}
+
+.jumb{background-image: url(../images/B6.jpg); background-size:cover;height: 100%; background-repeat:no-repeat}
